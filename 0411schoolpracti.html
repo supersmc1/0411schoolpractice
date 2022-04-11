@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+  <style>
+    .table{
+      width: 1920px;
+      height: 1080px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone{
+      width: 428px;
+      height: 926px;
+      border: 1px solid gray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .phone>div:nth-child(1){
+      width: 380px;
+      height: 110px;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      color: #c4c4c4;
+    }
+    .phone>div:nth-child(2){
+      width: 350px;
+      height: 45px;
+      font-weight: bold;
+      font-size: 30px;
+      color: rgb(75, 74, 74);
+    }
+
+    .phone>div:nth-child(3){
+      width: 350px;
+      height: 40px;
+      color: rgb(75, 74, 74);
+      
+    }
+
+    .phone>div:nth-child(4){
+      width: 400px;
+      height: 40px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .phone>div:nth-child(4)>div{
+      width: 10px;
+      height: 10px;
+      border: 1px solid black;
+      border-radius: 50%;
+      margin: 5px;
+      background-color: #c4c4c4;
+    }
+
+    .phone>div:nth-child(4)>div:nth-child(1){
+      background-color:black;
+    }
+
+    .main{
+      width: 420px;
+      height: 655px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card{
+      width: 400px;
+      height: 260px;
+      border: 1px solid black;
+      border-radius: 20px;
+      background-color: gray;
+    }
+
+    .card>div:nth-child(1){
+      width: 380px;
+      height: 30px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: white;
+    }
+
+    .card>div:nth-child(2){
+      width: 380px;
+      height: 90px;
+      font-weight: bold;
+      font-size: 60px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .card>div:nth-child(3){
+      width: 400px;
+      height: 135px;
+      display: flex;
+    }
+
+    .card>div:nth-child(3)>div:nth-child(1){
+      width: 280px;
+      height: 135px;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      flex-direction: column;
+      
+    }
+
+
+    .card>div:nth-child(3)>div:nth-child(2){
+      width: 120px;
+      height: 135px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .card>div:nth-child(3)>div:nth-child(1)>div:nth-child(1){
+      width: 230px;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: rgb(75, 74, 74);
+    }
+
+    .card>div:nth-child(3)>div:nth-child(1)>div:nth-child(2){
+      width: 230px;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: rgb(75, 74, 74);
+
+
+    }
+
+    .card>div:nth-child(3)>div:nth-child(1)>div:nth-child(3){
+      width: 230px;
+      height: 18px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .visa>div:nth-child(1){
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: gold;
+
+    }
+
+    .visa>div:nth-child(1)>div{
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .visa>div:nth-child(1)>div>div{
+      width: 15px;
+      height: 15px;
+      border: 1px solid black;
+    }
+    
+    .visa>div:nth-child(2){
+      width: 110px;
+      height: 100px;
+      font-family: 'Black Han Sans', sans-serif;
+
+
+
+    }
+    .chart{
+      width: 400px;
+      height: 360px;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 20px;
+      background-color: gray;
+      
+    }
+
+    .chart>div:nth-child(1){
+      width: 380px;
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    .chart>div:nth-child(1)>div{
+      width:370px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+    }
+
+    .good>div:nth-child(1){
+      width: 300px;
+      height: 20px;
+      font-weight: bold;
+      font-size: 25px;
+
+    }
+    
+    .good>div:nth-child(2){
+      width: 300;
+      height: 20px;
+      display: flex;
+      justify-content: flex-end;
+      color: rgb(75, 74, 74);
+
+    }
+
+
+    .good>div:nth-child(3){
+      width:370px;
+      height: 15px;
+      border-radius: 20px;
+      display: flex;
+      background-color: #c4c4c4;
+    }
+
+    .good>div:nth-child(3)>div:nth-child(1){
+      width: 60px;
+      height: 15px;
+      border: 1px solid black;
+      border-radius: 20px;
+      background-color: black;
+    }
+
+    .good>div:nth-child(3)>div:nth-child(2){
+      width: 100px;
+      height: 15px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .good>div:nth-child(3)>div:nth-child(2)>div{
+      width: 8px;
+      height: 8px;
+      border: 1px solid black;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    .good>div:nth-child(4){
+      width: 180px;
+      height: 15px;
+      display: flex;
+      justify-content: flex-end;
+      color: white;
+    }
+
+    .duo>div:nth-child(1){
+      width: 300px;
+      height: 20px;
+      font-weight: bold;
+      font-size: 25px;
+
+    }
+    
+    .duo>div:nth-child(2){
+      width: 300;
+      height: 20px;
+      display: flex;
+      justify-content: flex-end;
+      color: rgb(75, 74, 74);
+
+
+    }
+
+
+    .duo>div:nth-child(3){
+      width:370px;
+      height: 15px;
+      border-radius: 20px;
+      display: flex;
+      background-color: #c4c4c4;
+    }
+
+    .duo>div:nth-child(3)>div:nth-child(1){
+      width: 140px;
+      height: 15px;
+      border-radius: 20px;
+      background-color: black;
+    }
+
+    .duo>div:nth-child(3)>div:nth-child(2){
+      width: 100px;
+      height: 15px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      
+      
+    }
+
+    .duo>div:nth-child(3)>div:nth-child(2)>div{
+      width: 8px;
+      height: 8px;
+      border: 1px solid black;
+      border-radius: 50%;
+      background-color: white;
+      margin-right: 8px;
+
+    }
+
+    .duo>div:nth-child(4){
+      width: 250px;
+      height: 15px;
+      display: flex;
+      justify-content: flex-end;
+      color: white;
+    }
+    
+    .and>div:nth-child(1){
+      width: 300px;
+      height: 20px;
+      font-weight: bold;
+      font-size: 25px;
+
+    }
+    
+    .and>div:nth-child(2){
+      width: 300;
+      height: 20px;
+      display: flex;
+      justify-content: flex-end;
+      color: rgb(75, 74, 74);
+      
+    }
+
+
+    .and>div:nth-child(3){
+      width:370px;
+      height: 15px;
+      border-radius: 20px;
+      display: flex;
+      background-color: #c4c4c4;
+    }
+
+    .and>div:nth-child(3)>div:nth-child(1){
+      width: 200px;
+      height: 15px;
+      border-radius: 20px;
+      background-color: black;
+    }
+
+    .and>div:nth-child(3)>div:nth-child(2){
+      width: 100px;
+      height: 15px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .and>div:nth-child(3)>div:nth-child(2)>div{
+      width: 8px;
+      height: 8px;
+      border: 1px solid black;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    .and>div:nth-child(4){
+      width: 316px;
+      height: 15px;
+      display: flex;
+      justify-content: flex-end;
+      color: white;
+    }
+
+    .mo{
+      width: 300px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      color: rgb(75, 74, 74);
+
+
+    }
+    .mo>div{
+      width: 110px;
+      height: 50px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color:#c4c4c4;
+    }
+  </style>
+</head>
+<body>
+  <div class="table">
+    
+    <div class="phone">
+      <div><h1>+</h1></div>
+      <div>CARD management</div>
+      <div>User Money designed By for user</div>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      
+    <div class="main">
+      <div class="card">
+        <div>Bold Card+</div>
+        <div>YOUR CARD</div>
+
+        <div>
+          <div>
+
+            <div>
+              <div>0000</div>
+              <div>3333</div>
+              <div>1111</div>
+              <div>55555</div>
+            </div>
+
+            <div>
+              <div>Bold card</div>
+              <div>09 / 28</div>
+            </div>
+
+            <div>
+              <div>M a r i l y n</div>
+              <div>M o n r o e</div>
+            </div>
+          </div>
+          
+          <div class="visa">
+
+            <div>
+              <div>
+                <div></div>
+              </div>
+            </div>
+            <div><h1>VISA</h1></div>
+            
+          </div>
+
+        </div>
+      </div>
+
+      <div class="chart">
+        <div>
+
+          <div class="good">
+            <div>Good Habit</div>
+            <div>222, 333, 444, 555</div>
+            <div>
+              <div></div>
+              <div>
+                <div></div>
+              </div>
+            </div>
+            <div>45%</div>
+          </div>
+          
+
+          <div class="duo">
+            <div>Duolino</div>
+            <div>333,555,777,111</div>
+            <div>
+              <div></div>
+              <div>
+                <div></div>
+              </div>
+            </div>
+            <div>70%</div>
+          </div>
+
+          <div class="and">
+            <div>Android</div>
+            <div>344,555,677,777</div>
+            <div>
+              <div></div>
+              <div>
+                <div></div>
+              </div>
+            </div>
+            <div>85%</div>
+          </div>
+        
+        </div> 
+        
+        <div class="mo">
+          <div>MORE</div>
+        </div>
+      
+
+
+      </div>
+    </div>
+
+
+     
+
+    </div>
+
+  </div>
+</body>
+</html>
